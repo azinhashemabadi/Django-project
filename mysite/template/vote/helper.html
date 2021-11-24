@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> helper </title>  
+        <link href="/mysite/New folder/B_NAZANIN" rel="stylesheet" type="text/css">
+        <style>
+           
+            body{ 
+            background-image: url('https://image.freepik.com/free-photo/artificial-green-twig-near-blue-torn-paper-white-background_23-2148191113.jpg');   
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            
+            direction: rtl;
+
+            position: absolute;
+            left: 50%;
+            margin-left: -350px;
+            }
+            
+            table, th, td {
+                    border: 1px solid black;
+                    width: 800px;
+                    margin: 50px;
+                    padding: 1px;
+            }  
+        </style>
+    </head>
+    <body>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <center>
+        <table>
+            <font size = "+5">
+            <tr> 
+                <th>نام</th>
+                <th>تلفن همراه</th>
+                <th>جنسیت</th>
+                <th>آدرس</th>
+                <th>درخواست</th>
+            </tr>
+        </font>
+            {% for s in azin %}
+            <tr>
+                <td> {{ s.fullname }}</td>
+                <td> {{ s.number }}</td>
+                <td> {{ s.gender }}</td>
+                <td> {{ s.address }}</td>
+                <td> {{ s.bio }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+    </body>
+ </html>
